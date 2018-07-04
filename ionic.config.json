@@ -1,0 +1,8 @@
+{
+  "name": "iwbmobile-i4",
+  "type": "angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "pro_id": "ed92c620"
+}
