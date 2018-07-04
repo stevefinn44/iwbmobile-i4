@@ -27,6 +27,8 @@
     "@ionic/ng-toolkit": "1.0.0-rc.9",
     "@ionic/pro": "1.0.20",
     "@ionic/schematics-angular": "1.0.0-rc.9",
+    "auth0-js": "^9.6.1",
+    "auth0-lock": "^11.7.2",
     "core-js": "^2.5.3",
     "rxjs": "6.2.1",
     "zone.js": "^0.8.26"

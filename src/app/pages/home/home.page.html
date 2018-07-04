@@ -3,14 +3,23 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
+    <ion-title *ngIf="auth.isAuthenticated()">
       Home
+    </ion-title>
+    <ion-title *ngIf="!auth.isAuthenticated()">
+      Login Required
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the
-    <a target="_blank" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+  <h4 *ngIf="auth.isAuthenticated() && userProfile">
+    You are logged in as {{auth.userProfile.email}}! You can now <a routerLink="/ping">send authenticated requests</a> to your server.
+  </h4>
+  <h4 *ngIf="!auth.isAuthenticated()">
+    You are not logged in! Please <a (click)="auth.login()">Log In</a> to continue.
+  </h4>
+  <h4 *ngIf="auth.isAuthenticated()">
+   {{userInfo | json}}
+  </h4>
 </ion-content>
